@@ -1,0 +1,7 @@
+Каналы
+{% for channel in channels %}
+    <br>
+    <a href="{% url 'channel' channel.title %}">
+        {{ channel.title }}
+    </a>
+{% endfor %}

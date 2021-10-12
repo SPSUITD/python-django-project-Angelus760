@@ -1,0 +1,8 @@
+{% for msg in messages %}
+  {{ msg.author }} - {{ msg.text }}<br>
+{% endfor %}
+<form action="{% url 'new_message' channel.title %}" method="POST">
+  {% csrf_token %}
+  {{ form.as_ul }}
+  <p><input type="submit"></p>
+</form>
